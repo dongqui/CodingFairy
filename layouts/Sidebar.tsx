@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+import { SearchBar, List, OSIcon } from '../components';
+
 export default function Sidebar() {
   return (
     <aside
@@ -10,9 +12,26 @@ export default function Sidebar() {
         color: rgb(155, 155, 155);
         font-weight: 500;
         height: 100%;
+        flex-shrink: 0;
       `}
     >
-      sidebar
+      <header
+        css={css`
+          color: rgba(255, 255, 255, 0.81);
+          font-weight: 500;
+          font-size: 14px;
+          padding: 14px;
+        `}
+      >
+        Coding Fairy
+      </header>
+      <SearchBar />
+      <List>
+        <List.LinkItem href="/hi" depth={1}>
+          <OSIcon />
+          운영체제
+        </List.LinkItem>
+      </List>
     </aside>
   );
 }
