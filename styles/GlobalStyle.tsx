@@ -10,7 +10,8 @@ export default function GlobalStyle() {
           font-family: 'Inter', 'Noto Sans KR', Arial, sans-serif;
           box-sizing: border-box;
           user-select: none;
-          font-size: 1.2rem;
+          font-size: 1.4rem;
+          color: rgb(155, 155, 155);
         }
 
         *:focus {
