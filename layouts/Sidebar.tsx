@@ -27,7 +27,11 @@ export default function Sidebar() {
       </header>
       <SearchBar />
       <List>
-        <List.LinkItem href="/hi" depth={1}>
+        <List.LinkItem href="/OS" depth={1}>
+          <OSIcon />
+          운영체제
+        </List.LinkItem>
+        <List.LinkItem href="/OS/intro" depth={1}>
           <OSIcon />
           운영체제
         </List.LinkItem>

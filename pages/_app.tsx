@@ -1,18 +1,24 @@
 import type { AppProps } from 'next/app';
+import { appWithTranslation } from 'next-i18next';
 
-import { Container, Sidebar, Main } from '../layouts';
+import { Container, Sidebar, Main, Header } from '../layouts';
 import GlobalStyle from '../styles/GlobalStyle';
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
       <Container>
         <Sidebar />
-        <Main>
-          <Component {...pageProps} />
-        </Main>
+        <div>
+          <Header></Header>
+          <Main>
+            <Component {...pageProps} />
+          </Main>
+        </div>
       </Container>
     </>
   );
 }
+
+export default appWithTranslation(App /*, nextI18NextConfig */);
