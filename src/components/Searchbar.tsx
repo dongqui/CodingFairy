@@ -1,8 +1,10 @@
 import { css } from '@emotion/react';
+import { useTranslation } from 'react-i18next';
 
-import { SearchIcon } from '../components/icons';
+import { SearchIcon } from './icons';
 
 export default function SearchBar() {
+  const { t } = useTranslation('common');
   return (
     <div
       css={css`
@@ -20,6 +22,7 @@ export default function SearchBar() {
         `}
       >
         <SearchIcon />
+        {/* {t('search')} */}
       </button>
     </div>
   );

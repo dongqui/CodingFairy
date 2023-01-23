@@ -19,3 +19,11 @@ export function OSIcon() {
     </svg>
   );
 }
+
+export function ChevronIcon() {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={8} height={14} viewBox="0 0 10 16">
+      <path fill="none" stroke="#ffff" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m1 13 6-6-6-6" />
+    </svg>
+  );
+}

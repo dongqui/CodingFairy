@@ -2,11 +2,11 @@ import { useRouter } from 'next/router';
 
 const map: Record<string, Record<string, string>> = {
   en: {
-    OS: 'Operating system',
+    os: 'Operating system',
     intro: 'Introduction',
   },
   ko: {
-    OS: '운영체제',
+    os: '운영체제',
     intro: '소개',
   },
 };
