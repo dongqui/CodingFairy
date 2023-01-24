@@ -2,9 +2,9 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import type { GetStaticProps } from 'next';
 
-import { Heading, Paragraph, Spacing } from '../../components';
+import { Heading, Paragraph, Spacing } from 'components';
 
-export const getStaticProps: GetStaticProps<{}> = async ({ locale }) => ({
+export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
     ...(await serverSideTranslations(locale ?? 'en', ['common', 'footer'])),
   },
