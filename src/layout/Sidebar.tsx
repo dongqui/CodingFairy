@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'next-i18next';
 
 import { SearchBar, List, OSIcon, ChevronButton, FlexRow } from '../components';
 
