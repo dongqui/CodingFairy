@@ -30,6 +30,8 @@ export default function ChevronButton({ onClick, isOpen }: Props) {
       <div
         css={css`
           ${isOpen && `transform: rotate(90deg);`};
+          -webkit-transition: transform 0.4s;
+          transition: transform 0.4s;
           display: flex;
           align-items: center;
           justify-content: center;
