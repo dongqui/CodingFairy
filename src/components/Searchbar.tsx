@@ -8,21 +8,23 @@ export default function SearchBar() {
   return (
     <div
       css={css`
-        padding: 14px;
+        padding: 12px;
       `}
     >
       <button
         css={css`
           display: flex;
-          gap: 8px;
+
           background-color: transparent;
           outline: none;
           border: none;
           cursor: pointer;
+          align-items: center;
+          padding: 0;
         `}
       >
         <SearchIcon />
-        {/* {t('search')} */}
+        {t('search')}
       </button>
     </div>
   );
