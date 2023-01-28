@@ -6,9 +6,12 @@ import Layout from 'layout';
 import GlobalStyle from 'styles/GlobalStyle';
 
 const App = ({ Component, pageProps }: AppProps) => (
-  <Layout>
-    <Component {...pageProps} />
-  </Layout>
+  <>
+    <GlobalStyle />
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  </>
 );
 
 export default appWithTranslation(App);
