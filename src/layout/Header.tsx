@@ -1,9 +1,14 @@
 import { css } from '@emotion/react';
 
-import { Breadcrumb } from '../components';
-import { useBreadCrumbItems } from '../hooks';
+import { Breadcrumb, MenuIcon } from 'components';
+import { useBreadCrumbItems, useMediaQuery } from 'hooks';
+import { TABLIT_WIDTH } from 'constant';
 
-export default function Header() {
+interface Props {
+  showMenu: boolean;
+  setShowSidebar: (show: boolean) => void;
+}
+export default function Header({ showMenu, setShowSidebar }: Props) {
   const breadcrumbItems = useBreadCrumbItems();
 
   return (
@@ -16,6 +21,16 @@ export default function Header() {
         color: rgba(255, 255, 255, 0.81);
       `}
     >
+      {showMenu && (
+        <button
+          css={css`
+            height: 16px;
+          `}
+          onClick={() => setShowSidebar(true)}
+        >
+          <MenuIcon />
+        </button>
+      )}
       <Breadcrumb items={breadcrumbItems} />
     </header>
   );

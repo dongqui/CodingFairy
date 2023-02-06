@@ -1,20 +1,23 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
-import { useTranslation } from 'next-i18next';
 
-import { SearchBar, List, OSIcon, ChevronButton, FlexRow } from '../components';
+import { Overlay, SidebarList } from 'components';
+import Link from 'next/link';
 
-const MINIMUM_WIDTH = 220;
-const MAXIMUM_WIDTH = 480;
+import { SIDEBAR_MAXIMUM_WIDTH, SIDEBAR_MINIMUM_WIDTH, SIDEBAR_DEFAULT_WIDTH } from 'constant';
 
-export default function Sidebar() {
-  const { t } = useTranslation('common');
-  const [openOS, setOpenOS] = useState(false);
-  const [sidebarWidth, setSidebarWidth] = useState(223);
+interface Props {
+  show: boolean;
+  isTablit: boolean;
+  setShowSidebar: (show: boolean) => void;
+}
+
+export default function Sidebar({ show, isTablit, setShowSidebar }: Props) {
+  const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR_DEFAULT_WIDTH);
 
   function resize(e: MouseEvent) {
     const size = e.clientX;
-    if (size >= MINIMUM_WIDTH && size <= MAXIMUM_WIDTH) {
+    if (size >= SIDEBAR_MINIMUM_WIDTH && size <= SIDEBAR_MAXIMUM_WIDTH) {
       setSidebarWidth(e.clientX);
     }
   }
@@ -27,75 +30,69 @@ export default function Sidebar() {
   }
 
   return (
-    <aside
-      css={css`
-        width: ${sidebarWidth}px;
-        background-color: rgb(32, 32, 32);
-        box-shadow: rgb(255 255 255 / 5%) -1px 0px 0px 0px inset;
-        color: rgb(155, 155, 155);
-        font-weight: 500;
-        height: 100%;
-        flex-shrink: 0;
-        position: relative;
-      `}
-    >
-      <header
-        css={css`
-          color: rgba(255, 255, 255, 0.81);
-          font-weight: 500;
-          font-size: 14px;
-          padding: 14px;
-        `}
-      >
-        Coding Fairy
-      </header>
-      <SearchBar />
-      <List>
-        <List.LinkItem href="/os" depth={1}>
-          <FlexRow>
-            <OSIcon />
-            {t('operating-system')}
-          </FlexRow>
-          <ChevronButton
-            onClick={(e) => {
-              e.preventDefault();
-              setOpenOS(!openOS);
-            }}
-            isOpen={openOS}
-          />
-        </List.LinkItem>
-        {openOS && (
-          <List.LinkItem href="/os/intro" depth={2}>
-            <FlexRow>
-              <OSIcon />
-              {t('intro')}
-            </FlexRow>
-          </List.LinkItem>
-        )}
-      </List>
+    <>
+      {show && isTablit && <Overlay />}
 
-      <div
+      <aside
         css={css`
-          position: absolute;
-          right: 0px;
-          width: 0px;
-          flex-grow: 0;
-          z-index: 1;
-          top: 0px;
-          bottom: 0px;
-          pointer-events: auto;
+          overflow-x: hidden;
+          width: ${show ? sidebarWidth : 0}px;
+          background-color: rgb(32, 32, 32);
+          box-shadow: rgb(255 255 255 / 5%) -1px 0px 0px 0px inset;
+          color: rgb(155, 155, 155);
+          font-weight: 500;
+          height: 100%;
+          flex-shrink: 0;
+          position: ${isTablit ? 'absolute' : 'relative'};
+          top: 0;
+          left: 0;
+          z-index: 10;
         `}
-        onMouseDown={handleResizebarMouseDown}
       >
+        <header
+          css={css`
+            padding: 14px;
+          `}
+        >
+          <Link
+            href="/"
+            css={css`
+              text-decoration: none;
+              color: rgba(255, 255, 255, 0.81);
+              font-weight: 500;
+              font-size: 14px;
+            `}
+          >
+            Coding Fairy
+          </Link>
+          <button onClick={() => setShowSidebar(false)}>닫기</button>
+        </header>
+
+        <SidebarList />
+
         <div
           css={css`
-            cursor: col-resize;
-            height: 100%;
-            width: 12px;
-            margin-left: -6px;
+            position: absolute;
+            right: 0px;
+            width: 0px;
+            flex-grow: 0;
+            z-index: 1;
+            top: 0px;
+            bottom: 0px;
+            pointer-events: auto;
           `}
-        />
-      </div>
-    </aside>
+          onMouseDown={handleResizebarMouseDown}
+        >
+          <div
+            css={css`
+              cursor: col-resize;
+              height: 100%;
+              width: 12px;
+              margin-left: -6px;
+            `}
+          />
+        </div>
+      </aside>
+    </>
   );
 }
