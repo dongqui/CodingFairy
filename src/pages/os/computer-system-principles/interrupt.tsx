@@ -6,7 +6,7 @@ import { Heading, Paragraph, Spacing } from 'components';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? 'en', ['common', 'footer'])),
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
   },
 });
 

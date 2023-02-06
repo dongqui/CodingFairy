@@ -1,5 +1,8 @@
 {
   "search": "Search",
   "operating-system": "운영체제",
-  "intro": "소개"
+  "intro": "소개",
+  "principles-os": "컴퓨터 시스템 동작원리 ",
+  "computer-structure": "컴퓨터 시스템 구조",
+  "interrupt" : "인터럽트"
 }
