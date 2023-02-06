@@ -10,26 +10,35 @@ export default function List({ children }: PropsWithChildren) {
 interface LinkItemProps {
   href: string;
   depth: number;
+  isCurrentPath: boolean;
 }
 
-List.LinkItem = function LinkItem({ children, href, depth }: PropsWithChildren<LinkItemProps>) {
+List.LinkItem = function LinkItem({ children, href, depth, isCurrentPath }: PropsWithChildren<LinkItemProps>) {
   return (
     <li
       css={css`
-        padding: 0 14px 0 ${depth * 14}px;
-        height: 27px;
-        margin: 1px 0;
+        margin: 1px 4px;
+        border-radius: 4px;
+        background-color: ${isCurrentPath ? 'rgba(255, 255, 255, 0.055)' : 'inherit'};
       `}
     >
       <Link
         href={href}
         css={css`
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.055);
+          }
+          border-radius: 4px;
+
+          padding: 3px 0 3px ${depth * 14}px;
+
           text-decoration: none;
           display: flex;
           align-items: center;
           justify-content: space-between;
           width: 100%;
           gap: 8px;
+          height: 28px;
         `}
       >
         {children}

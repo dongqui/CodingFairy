@@ -22,7 +22,7 @@ export default function ChevronButton({ onClick, isOpen }: Props) {
         justify-content: center;
         cursor: pointer;
         &:hover {
-          background-color: red;
+          background-color: rgba(255, 255, 255, 0.055);
         }
         border-radius: 3px;
       `}

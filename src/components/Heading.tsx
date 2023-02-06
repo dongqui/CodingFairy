@@ -19,6 +19,18 @@ export default function Heading({ level, children }: PropsWithChildren<Props>) {
           {children}
         </h1>
       );
+    case 2:
+      return (
+        <h2
+          css={css`
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: rgba(255, 255, 255, 0.81);
+          `}
+        >
+          {children}
+        </h2>
+      );
     default:
       return null;
   }
