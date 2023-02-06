@@ -50,6 +50,14 @@ export default function GlobalStyle() {
           padding: 0;
           list-style: none;
         }
+
+        button {
+          cursor: pointer;
+          background: none;
+          outline: none;
+          border: none;
+          padding: 0;
+        }
       `}
     />
   );
