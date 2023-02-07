@@ -14,10 +14,10 @@ export default function Page() {
 
   return (
     <>
-      <Heading level={2}>{t('principles-os')}</Heading>
+      <Heading level={2}>{t('computer-system-principles')}</Heading>
       <Spacing size={40} />
       <IndexList>
-        <IndexList.Item href="/os/computer-system-principles/computer-system-structure">{t('computer-structure')}</IndexList.Item>
+        <IndexList.Item href="/os/computer-system-principles/computer-system-structure">{t('computer-system-structure')}</IndexList.Item>
         <IndexList.Item href="/os/computer-system-principles/interrupt">{t('interrupt')}</IndexList.Item>
       </IndexList>
     </>

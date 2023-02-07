@@ -1,8 +1,8 @@
 {
   "search": "Search",
-  "operating-system": "Operating system",
+  "os": "Operating system",
   "intro": "Introduction",
-  "principles-os": "Principles of computer system operation",
-  "computer-structure": "Computer system structure",
+  "computer-system-principles": "Computer system principles",
+  "computer-system-structure": "Computer system structure",
   "interrupt" :"Interrupt"
 }

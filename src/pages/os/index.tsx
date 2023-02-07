@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <>
-      <Heading level={2}>{t('operating-system')}</Heading>
+      <Heading level={2}>{t('os')}</Heading>
       <Spacing size={40} />
       <IndexList>
         <IndexList.Item href="os/intro">{t('intro')}</IndexList.Item>

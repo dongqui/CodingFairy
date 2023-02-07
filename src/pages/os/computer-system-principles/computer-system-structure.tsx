@@ -14,7 +14,7 @@ export default function Page() {
 
   return (
     <>
-      <Heading level={2}>{t('computer-structure')}</Heading>
+      <Heading level={2}>{t('computer-system-structure')}</Heading>
       <Spacing size={40} />
     </>
   );
