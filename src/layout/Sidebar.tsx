@@ -1,5 +1,6 @@
 import { css } from '@emotion/react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 import { Overlay, SidebarList, LeftChevronIcon } from 'components';
 import Link from 'next/link';
@@ -14,6 +15,19 @@ interface Props {
 
 export default function Sidebar({ show, isTablit, setShowSidebar }: Props) {
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR_DEFAULT_WIDTH);
+  const router = useRouter();
+
+  useEffect(() => {
+    function handleRouteChange() {
+      if (show && isTablit) {
+        setShowSidebar(false);
+      }
+    }
+    router.events.on('routeChangeComplete', handleRouteChange);
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events, isTablit, show, setShowSidebar]);
 
   function resize(e: MouseEvent) {
     const size = e.clientX;
