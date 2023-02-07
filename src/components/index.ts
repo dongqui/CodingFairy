@@ -9,5 +9,6 @@ export { default as ChevronButton } from './ChevronButton';
 export { default as FlexRow } from './FlexRow';
 export { default as Overlay } from './Overlay';
 export { default as SidebarList } from './SidebarList';
+export { default as Ellipsis } from './Ellipsis';
 
 export * from './icons';

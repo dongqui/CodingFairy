@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import { useState } from 'react';
 
-import { Overlay, SidebarList } from 'components';
+import { Overlay, SidebarList, LeftChevronIcon } from 'components';
 import Link from 'next/link';
 
 import { SIDEBAR_MAXIMUM_WIDTH, SIDEBAR_MINIMUM_WIDTH, SIDEBAR_DEFAULT_WIDTH } from 'constant';
@@ -52,6 +52,8 @@ export default function Sidebar({ show, isTablit, setShowSidebar }: Props) {
         <header
           css={css`
             padding: 14px;
+            position: relative;
+            overflow-x: visible;
           `}
         >
           <Link
@@ -65,7 +67,22 @@ export default function Sidebar({ show, isTablit, setShowSidebar }: Props) {
           >
             Coding Fairy
           </Link>
-          <button onClick={() => setShowSidebar(false)}>닫기</button>
+          <button
+            css={css`
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: absolute;
+              right: 5px;
+              top: 10px;
+              &:hover {
+                opacity: 0.5;
+              }
+            `}
+            onClick={() => setShowSidebar(false)}
+          >
+            <LeftChevronIcon />
+          </button>
         </header>
 
         <SidebarList />

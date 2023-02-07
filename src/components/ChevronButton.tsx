@@ -21,6 +21,7 @@ export default function ChevronButton({ onClick, isOpen }: Props) {
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        flex-shrink: 0;
         &:hover {
           background-color: rgba(255, 255, 255, 0.055);
         }
