@@ -8,6 +8,7 @@ export default function Container({ children }: PropsWithChildren) {
         display: flex;
         width: 100%;
         height: 100vh;
+        overflow-y: hidden;
       `}
     >
       {children}

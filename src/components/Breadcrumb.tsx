@@ -19,6 +19,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
         color: inherit;
         line-height: 1.2;
         font-size: 1.4rem;
+        width: 100%;
       `}
     >
       {items.map((item, idx) => (
@@ -47,7 +48,7 @@ function Item({ path, title }: ItemProps) {
         height: 2.4rem;
         border-radius: 0.44rem;
         flex-shrink: 1;
-        padding: 0.4rem 0.6rem 0 0.6rem;
+        padding: 0.2rem 0.6rem 0 0.6rem;
         :hover {
           background-color: rgba(255, 255, 255, 0.055);
         }

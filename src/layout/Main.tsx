@@ -11,9 +11,8 @@ export default function Main({ children }: PropsWithChildren) {
   return (
     <main
       css={css`
-        padding-left: calc(${padding}px + env(safe-area-inset-left));
-        padding-right: calc(${padding}px + env(safe-area-inset-right));
-        padding-top: 80px;
+        padding: 80px calc(${padding}px + env(safe-area-inset-right)) 40px calc(${padding}px + env(safe-area-inset-left));
+        overflow-y: auto;
       `}
     >
       {children}

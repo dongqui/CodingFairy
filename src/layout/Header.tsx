@@ -18,9 +18,13 @@ export default function Header({ showMenu, setShowSidebar, isTablit }: Props) {
         height: 45px;
         display: flex;
         align-items: center;
-        padding: 0 10px 0 18px;
+        padding: 0 20px 0 18px;
         color: rgba(255, 255, 255, 0.81);
         border-bottom: ${isTablit ? `1px solid rgba(255, 255, 255, 0.55)` : ''};
+        position: sticky;
+        left: 0;
+        right: 0;
+        overflow: hidden;
       `}
     >
       {showMenu && (
