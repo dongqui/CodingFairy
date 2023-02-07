@@ -23,8 +23,12 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <Container>
       <Sidebar show={showSidebar} isTablit={isTablit} setShowSidebar={setShowSidebar} />
-      <div>
-        <Header showMenu={isTablit || !showSidebar} setShowSidebar={setShowSidebar} />
+      <div
+        css={css`
+          width: 100%;
+        `}
+      >
+        <Header showMenu={isTablit || !showSidebar} isTablit={isTablit} setShowSidebar={setShowSidebar} />
         <Main>{children} </Main>
       </div>
     </Container>
