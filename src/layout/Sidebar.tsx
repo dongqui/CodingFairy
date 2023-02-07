@@ -73,7 +73,7 @@ export default function Sidebar({ show, isTablit, setShowSidebar }: Props) {
               align-items: center;
               justify-content: center;
               position: absolute;
-              right: 5px;
+              right: 0;
               top: 10px;
               &:hover {
                 opacity: 0.5;
