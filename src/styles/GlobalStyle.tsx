@@ -9,7 +9,7 @@ export default function GlobalStyle() {
         *::after {
           font-family: 'Inter', 'Noto Sans KR', Arial, sans-serif;
           box-sizing: border-box;
-          user-select: none;
+          user-select: auto;
           font-size: 1.4rem;
           color: rgb(155, 155, 155);
         }

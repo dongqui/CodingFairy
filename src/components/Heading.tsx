@@ -23,8 +23,20 @@ export default function Heading({ level, children }: PropsWithChildren<Props>) {
       return (
         <h2
           css={css`
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.81);
+          `}
+        >
+          {children}
+        </h2>
+      );
+    case 3:
+      return (
+        <h2
+          css={css`
+            font-size: 2rem;
+            font-weight: 600;
             color: rgba(255, 255, 255, 0.81);
           `}
         >
