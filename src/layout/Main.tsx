@@ -13,6 +13,8 @@ export default function Main({ children }: PropsWithChildren) {
       css={css`
         padding: 80px calc(${padding}px + env(safe-area-inset-right)) 40px calc(${padding}px + env(safe-area-inset-left));
         overflow-y: auto;
+        max-width: 900px;
+        margin: 0 auto;
       `}
     >
       {children}
