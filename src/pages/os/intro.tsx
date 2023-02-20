@@ -21,11 +21,10 @@ export default function Page() {
       <Heading level={1}>{t('title')}</Heading>
       <Youtube>
         <iframe
-          src="https://www.youtube.com/embed/HjGF1ga1ijc"
+          src="https://www.youtube.com/embed/V50xvIyIVJo"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
-          // frameBorder={0}
         ></iframe>
       </Youtube>
 
