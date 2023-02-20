@@ -1,6 +1,7 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useTranslation } from 'next-i18next';
 import type { GetStaticProps } from 'next';
+import Head from 'next/head';
 
 import whatIsOsImage from '/public/images/os/intro/rsz_1what-is-os.jpg';
 import UIImage from '/public/images/os/intro/ui.jpg';
@@ -18,6 +19,15 @@ export default function Page() {
   const { t } = useTranslation(['os-intro']);
   return (
     <Stack>
+      <Head>
+        <title>{t('title')}</title>
+        <meta name="description" content={t('description') || ''} />
+        <meta name="keywords" content={t('keywords') || ''} />
+        <meta name="author" content="CodingFairy" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.codingfairy.org/"></link>
+      </Head>
+
       <Heading level={1}>{t('title')}</Heading>
       <Youtube>
         <iframe
