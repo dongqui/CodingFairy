@@ -10,7 +10,7 @@ import { TABLIT_WIDTH } from 'constant';
 
 export default function Layout({ children }: PropsWithChildren) {
   const isTablit = useMediaQuery(TABLIT_WIDTH);
-  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSidebar, setShowSidebar] = useState(false);
 
   useEffect(() => {
     if (isTablit) {

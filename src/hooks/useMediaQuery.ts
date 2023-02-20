@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { debounce } from 'helper';
 
 export default function useMediaQuery(min_width: number) {
-  const [isWidthOver, setIsWidthOver] = useState(false);
+  const [isWidthOver, setIsWidthOver] = useState(true);
 
   useEffect(() => {
     if (window) {
