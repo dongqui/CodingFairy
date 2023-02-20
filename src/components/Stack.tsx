@@ -6,13 +6,13 @@ interface Props {
   direction?: 'row' | 'column';
 }
 
-export default function Stack({ spacing = 1, direction = 'row', children }: PropsWithChildren<Props>) {
+export default function Stack({ spacing = 20, direction = 'column', children }: PropsWithChildren<Props>) {
   return (
     <div
       css={css`
         display: flex;
         flex-direction: ${direction};
-        gap: ${spacing};
+        gap: ${spacing}px;
       `}
     >
       {children}
