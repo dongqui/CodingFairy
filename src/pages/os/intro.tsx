@@ -23,12 +23,9 @@ export default function Page() {
         <title>{t('title')}</title>
         <meta name="description" content={t('description') || ''} />
         <meta name="keywords" content={t('keywords') || ''} />
-        <meta name="author" content="CodingFairy" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.codingfairy.org/"></link>
       </Head>
 
-      <Heading level={1}>{t('title')}</Heading>
+      <Heading level={1}>{t('subject')}</Heading>
       <Youtube>
         <iframe
           src="https://www.youtube.com/embed/V50xvIyIVJo"
