@@ -26,14 +26,10 @@ export default function Page() {
       </Head>
 
       <Heading level={1}>{t('subject')}</Heading>
-      <Youtube>
-        <iframe
-          src="https://www.youtube.com/embed/V50xvIyIVJo"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </Youtube>
+
+      <Youtube src="https://www.youtube.com/embed/V50xvIyIVJo" />
+
+      <Divider />
 
       <Heading level={2}>{t('what-is-os')}</Heading>
       <Image src={whatIsOsImage} alt="what is os" />

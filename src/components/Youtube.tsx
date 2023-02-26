@@ -1,7 +1,10 @@
 import { css } from '@emotion/react';
-import { PropsWithChildren } from 'react';
 
-export default function Youtube({ children }: PropsWithChildren) {
+interface Props {
+  src: string;
+}
+
+export default function Youtube({ src }: Props) {
   return (
     <div
       css={css`
@@ -20,7 +23,12 @@ export default function Youtube({ children }: PropsWithChildren) {
         }
       `}
     >
-      {children}
+      <iframe
+        src={src}
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
     </div>
   );
 }
