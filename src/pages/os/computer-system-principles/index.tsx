@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale ?? 'en', ['common', 'footer'])),
+    ...(await serverSideTranslations(locale ?? 'en', ['common'])),
   },
 });
 
@@ -18,7 +18,7 @@ export default function Page() {
       <Spacing size={40} />
       <IndexList>
         <IndexList.Item href="/os/computer-system-principles/computer-system-structure">{t('computer-system-structure')}</IndexList.Item>
-        <IndexList.Item href="/os/computer-system-principles/interrupt">{t('interrupt')}</IndexList.Item>
+        {/* <IndexList.Item href="/os/computer-system-principles/interrupt">{t('interrupt')}</IndexList.Item> */}
       </IndexList>
     </>
   );

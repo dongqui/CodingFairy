@@ -31,7 +31,7 @@ export default function SidebarList() {
           <List.LinkItem href="/os/intro" depth={2} isCurrentPath={router.asPath === '/os/intro'}>
             <Ellipsis>1. {t('intro')}</Ellipsis>
           </List.LinkItem>
-          {/* <List.LinkItem href="/os/computer-system-principles" depth={2} isCurrentPath={router.asPath === '/os/computer-system-principles'}>
+          <List.LinkItem href="/os/computer-system-principles" depth={2} isCurrentPath={router.asPath === '/os/computer-system-principles'}>
             <Ellipsis>2. {t('computer-system-principles')}</Ellipsis>
             <ChevronButton
               onClick={(e) => {
@@ -40,8 +40,8 @@ export default function SidebarList() {
               }}
               isOpen={openPrinciplesOS}
             />
-          </List.LinkItem> */}
-          {/* {openPrinciplesOS && (
+          </List.LinkItem>
+          {openPrinciplesOS && (
             <>
               <List.LinkItem
                 href="/os/computer-system-principles/computer-system-structure"
@@ -51,11 +51,8 @@ export default function SidebarList() {
                 <Ellipsis>2.1 {t('computer-system-structure')}</Ellipsis>
                 <Spacing size={15} direction="width" />
               </List.LinkItem>
-              <List.LinkItem href="/os/computer-system-principles/interrupt" depth={3} isCurrentPath={router.asPath === '/os/computer-system-principles/interrupt'}>
-                <Ellipsis>2.2 {t('interrupt')}</Ellipsis>
-              </List.LinkItem>
             </>
-          )} */}
+          )}
         </>
       )}
     </List>

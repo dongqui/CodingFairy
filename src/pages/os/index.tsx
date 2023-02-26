@@ -25,6 +25,7 @@ export default function Page() {
       <Spacing size={40} />
       <IndexList>
         <IndexList.Item href="os/intro">{t('intro', { ns: 'common' })}</IndexList.Item>
+        <IndexList.Item href="os/computer-system-principles">{t('computer-system-principles', { ns: 'common' })}</IndexList.Item>
       </IndexList>
     </>
   );
