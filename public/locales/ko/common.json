@@ -3,6 +3,6 @@
   "os": "운영체제",
   "intro": "소개",
   "computer-system-principles": "컴퓨터 시스템 동작원리 ",
-  "computer-system-structure": "컴퓨터 구조",
+  "computer-system-structure": "컴퓨터 시스템 구조",
   "interrupt" : "인터럽트"
 }
