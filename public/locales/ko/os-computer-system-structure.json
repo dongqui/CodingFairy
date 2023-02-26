@@ -1,8 +1,8 @@
 {
-  "title" : "CodingFairy | 운영체제 - 컴퓨터 구조",
+  "title" : "CodingFairy | 운영체제 - 컴퓨터 시스템 구조",
   "description": "컴퓨터 구조에 대해 간략한 소개. 각각의 컴퓨터 하드웨어가 어떤식으로 동작하는지 알아봅시다.",
-  "keywords": "CPU, RAM, 주메모리, HDD, SSD, input, output, 컴퓨터, 컴퓨터 구조, 프로세스",
-  "subject": "운영체제 - 컴퓨터 구조",
+  "keywords": "CPU, RAM, 주메모리, HDD, SSD, input, output, 컴퓨터, 컴퓨터 시스템 구조, 프로세스",
+  "subject": "운영체제 - 컴퓨터 시스템 구조",
   "basic-structure": "컴퓨터는 입력과 출력!",
   "external-device": "외부 장치",
   "internal-device": "내부 장치",
