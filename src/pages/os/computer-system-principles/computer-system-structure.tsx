@@ -23,7 +23,7 @@ export default function Page() {
         <meta name="keywords" content={t('keywords') || ''} />
       </Head>
       <Heading level={1}>{t('subject')}</Heading>
-      <Youtube src="https://www.youtube.com/embed/V50xvIyIVJo" />
+      <Youtube src="https://www.youtube.com/embed/kN5SNuZX3gE" />
       <Divider />
       <Heading level={2}>{t('basic-structure')}</Heading>
       <Image src={computerStructure} alt="Computer structure image" />
