@@ -14,5 +14,6 @@ export { default as Divider } from './Divider';
 export { default as Image } from './Image';
 export { default as Stack } from './Stack';
 export { default as Youtube } from './Youtube';
+export { default as Indent } from './Indent';
 
 export * from './icons';
